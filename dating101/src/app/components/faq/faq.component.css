@@ -1,0 +1,16 @@
+.faqs {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.faq ul {
+    padding-left: 30px;
+}
+
+@media (max-width: 720px) {
+    .faqs {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
