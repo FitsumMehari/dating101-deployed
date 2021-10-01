@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from 'src/app/services/blog.service';
+import { NgSearchFilterService } from 'ng-search-filter';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
@@ -7,34 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  blogs = [
-    {
-    id: 1,
-    title: 'Online Dating Is Dominating The Internet',
-    body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam sequi nostrum est magni inventore architecto perspiciatis sunt dolorem soluta deleniti.'
-  },
-  {
-    id: 2,
-    title: 'Finding Your Solemate Has Never Been Easier',
-    body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam sequi nostrum est magni inventore architecto perspiciatis sunt dolorem soluta deleniti.'
-  },
-  {
-    id: 3,
-    title: 'Start A Family Now',
-    body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam sequi nostrum est magni inventore architecto perspiciatis sunt dolorem soluta deleniti.'
-  },
-  {
-    id: 4,
-    title: 'What\'s New?',
-    body: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam sequi nostrum est magni inventore architecto perspiciatis sunt dolorem soluta deleniti.'
-  }]
+  searchText = '';
+  blogs: any;
 
-  constructor() {
-
-   }
+  constructor(private blogService: BlogService, private _ngSearchFilterService: NgSearchFilterService, private router: Router) { }
 
   ngOnInit(): void {
+    this._ngSearchFilterService.setDefaultLang('en');
+    this.blogs = this.blogService.getAllBlogs();
+  }
 
+  navigate(id: number) {
+    this.router.navigate([`blog/${id}`]);
   }
 
 }
