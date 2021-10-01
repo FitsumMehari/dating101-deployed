@@ -1,0 +1,27 @@
+<div class="blogs">
+    <div class="head">
+        <div class="title">
+            <h2>Blog</h2>
+        </div>
+        <div class="fixed">
+            <nav>
+                <div class="nav-wrapper">
+
+                    <div class="input-field">
+                        <input id="search" type="search" [(ngModel)]="searchText" placeholder="Type To Search">
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons" (click)="searchText=''">close</i>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="blog" *ngFor="let blog of blogs | filter: searchText">
+        <div class="title">
+            <h4>{{blog.title}}</h4>
+            <p>{{blog.body}}</p>
+            <button class="btn" (click)="navigate(blog.id)">Read More</button>
+        </div>
+    </div>
+</div>

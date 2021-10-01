@@ -1,0 +1,36 @@
+.input-field {
+    display: flex !important;
+}
+
+.section-subscribe input {
+    padding: 5px !important;
+    font-size: 18px !important;
+    width: 60% !important;
+    border: #f4f4f4 3px solid !important;
+}
+
+button {
+    padding: 0.85rem !important;
+    font-size: 18px !important;
+    width: fit-content !important;
+    height: fit-content !important;
+}
+
+@media (max-width:770px) {
+    .input-field {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .section-subscribe input {
+        padding: 5px !important;
+        font-size: 18px !important;
+        width: 100% !important;
+        border: #f4f4f4 3px solid !important;
+    }
+    button {
+        padding: 0.85rem !important;
+        font-size: 18px !important;
+        width: fit-content !important;
+        height: fit-content !important;
+    }
+}

@@ -1,0 +1,12 @@
+.about {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 720px) {
+    .about {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
