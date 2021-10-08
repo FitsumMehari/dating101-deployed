@@ -10,6 +10,7 @@
 }
 
 button {
+    margin-left: 5px;
     padding: 0.85rem !important;
     font-size: 18px !important;
     width: fit-content !important;
@@ -28,6 +29,7 @@ button {
         border: #f4f4f4 3px solid !important;
     }
     button {
+        margin-left: 0;
         padding: 0.85rem !important;
         font-size: 18px !important;
         width: fit-content !important;

@@ -1,0 +1,9 @@
+###
+POST http://localhost:8000/users/register
+Content-Type: application/json
+
+{
+  "username": "userDetails.username",
+  "email":" userDetails.email",
+  "password": "userDetails.password"
+}

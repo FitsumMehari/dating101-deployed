@@ -1,51 +1,62 @@
 <div class="grey lighten-4">
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">DateMe</a>
-                <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-                    <i class="material-icons large teal-text">menu</i>
-                </a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li>
-                        <a routerLink="home" routerLinkActive="active">Home</a>
-                    </li>
-                    <li>
-                        <a routerLink="blog" routerLinkActive="active">Blog</a>
-                    </li>
-                    <li>
-                        <a routerLink="faq" routerLinkActive="active">FAQ</a>
-                    </li>
-                    <li>
-                        <a routerLink="about" routerLinkActive="active">About</a>
-                    </li>
-                    <li>
-                        <a routerLink="" routerLinkActive="active">Sign In</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-    <ul id="mobile-nav" class="sidenav">
-        <li>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="home" class="brand-logo">DateMe</a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+          <i class="material-icons large teal-text">menu</i>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
             <a routerLink="home" routerLinkActive="active">Home</a>
-        </li>
-        <li>
+          </li>
+          <li>
             <a routerLink="blog" routerLinkActive="active">Blog</a>
-        </li>
-        <li>
+          </li>
+          <li>
             <a routerLink="faq" routerLinkActive="active">FAQ</a>
-        </li>
-        <li>
+          </li>
+          <li>
             <a routerLink="about" routerLinkActive="active">About</a>
-        </li>
-        <li>
-            <a routerLink="" routerLinkActive="active">Sign In</a>
-        </li>
-    </ul>
-    <div class="container">
-        <router-outlet></router-outlet>
-    </div>
-    <app-footer></app-footer>
-
+          </li>
+          <li>
+            <a routerLink="profile" routerLinkActive="active">{{profile}}</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <ul id="mobile-nav" class="sidenav sidenav-close">
+    <nav>
+      <div class="navbar-fixed">
+        <div class="nav-wrapper">
+          <a href="home" class="brand-logo">DateMe</a>
+        </div>
+      </div>
+    </nav>
+    <li>
+      <a routerLink="home" routerLinkActive="active">
+        <i class="material-icons small teal-text">home</i>Home</a>
+    </li>
+    <li>
+      <a routerLink="blog" routerLinkActive="active">
+        <i class="material-icons small teal-text">rss_feed</i>Blog</a>
+    </li>
+    <li>
+      <a routerLink="faq" routerLinkActive="active">
+        <i class="material-icons small teal-text">question_answer</i>FAQ</a>
+    </li>
+    <li>
+      <a routerLink="about" routerLinkActive="active">
+        <i class="material-icons small teal-text">info</i>About</a>
+    </li>
+    <li>
+      <a routerLink="profile" routerLinkActive="active">
+        <i class="material-icons small teal-text">person</i>Sign In</a>
+    </li>
+  </ul>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
 </div>
